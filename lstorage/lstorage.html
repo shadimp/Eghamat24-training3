@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="lstorage.js" defer></script>
+</head>
+
+<body style="direction: rtl;">
+
+    <form class="form">
+        <label for="enterdate">تاریخ ورود</label><br>
+        <input class="input" type="time" id="enterdate" > <br><br>
+
+        <label for="exitdate"> تاریخ خروج :</label><br>
+        <input class="input" type="time" id="exitdate" ><br><br>
+        <div style="text-align:center">
+            <button class="button" id="btn1" onclick=addMyNewItem()> اضافه کردن</button>
+        </div>
+    </form>
+   
+    <table id="mytable" class="mytable">
+        <thead>
+            <tr>
+                <th>تاریخ ورود</th>
+                <th>تاریخ خروج</th>
+                <th>حذف</th>
+            <tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+  
+
+</body>
+
+</html>

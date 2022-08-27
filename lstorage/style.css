@@ -1,0 +1,42 @@
+.form {
+  width: 230px;
+  height: 150px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  border: solid 1px black;
+  text-align: right;
+  direction: rtl;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: beige;
+}
+
+.input {
+  border-radius: 3px;
+  height: 20px;
+}
+
+.button {
+  border: solid 1px black;
+  margin: 5px;
+  text-align: right;
+}
+
+.showlist {
+  margin-right: 500px;
+  margin-left: 500px;
+  border: solid 3px black;
+  padding: 30px;
+  height: 180px;
+}
+
+table, td, th {
+  border: 1px solid black;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: beige;
+}
+
+thead {
+  color: green;
+}/*# sourceMappingURL=style.css.map */
