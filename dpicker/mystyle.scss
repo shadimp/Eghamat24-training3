@@ -1,0 +1,84 @@
+@font-face {
+    font-family: Vazir;
+    font-style: normal;
+    font-weight: normal;
+    src: url("fonts/Vazir.eot");
+    src: url("fonts/Vazir.eot?#iefix") format("embedded-opentype"), url("fonts/Vazir.woff2") format("woff2"), url("fonts/Vazir.woff") format("woff"), url("fonts/Vazir.ttf") format("truetype");
+}
+
+.body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.calendar {
+    width: 325px;
+    height: auto;
+    padding: 10px;
+    background: #f5e7e7;
+    box-sizing: border-box;
+    border-radius: 10%;
+    float: right;
+    display: none;
+    font-family: vazir;
+    font-weight: 100;
+    font-size: 12px;
+
+}
+
+.calendar .controler {
+    text-align: center;
+    font-size: 15px; 
+    &:hover {
+        background-color: aquamarine;
+    }
+} 
+
+.calendar .date {
+    padding: 20x;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40px, 20fr));
+    grid: gap 25px;
+    box-sizing: border-box;
+}
+
+.calendar .date div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    color: #262626;
+    
+ .date div.day {
+    font-weight: 700;
+}
+}
+
+
+.calendar .date div.number:nth-child(7n+1),
+.calendar .date div.day:first-child {
+    color: red;
+}
+
+.calendar .date div.number.active {
+    background-color: #009688;
+    color: #fff;
+    cursor: pointer;
+
+}
+
+.div-today {
+    text-align: center;
+    font-weight: 200;
+    font-family: vazir;
+    font-size: 15px;
+
+    &:hover {
+        background-color: red;
+    }
+}
