@@ -1,0 +1,92 @@
+$bgcolor: #fff;
+$bgcolor-2: #f8f9fa;
+$bgcolor-3: black;
+
+
+.h1 {
+    float: right;
+    padding: 0 10px;
+    margin-top: 20px;
+    color: &$bgcolor-3;
+    text-decoration: none;
+}
+
+.img {
+    margin: 0px;
+    text-align: center;
+    max-width: 100%;
+    height: auto;
+}
+
+.svg {
+    height: 20px;
+    line-height: 20px;
+    width: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.myinput:hover {
+    background-color: $bgcolor;
+    box-shadow: 0 1px 6px rgba(32, 33, 36, .28);
+    border-color: rgba(223, 225, 229, 0);
+}
+
+.divinput {
+    flex: 1;
+    display: flex;
+    padding: 5px 8px 0 14px;
+    text-align: center;
+    overflow: auto;
+}
+
+.myinput {
+    display: inline-block;
+    position: relative;
+    z-index: 3;
+    height: 44px;
+    background: $bgcolor;
+    background-color: rgb(255, 255, 255);
+    border: 1px solid #dfe1e5;
+    border-top-color: rgb(223, 225, 229);
+    border-right-color: rgb(223, 225, 229);
+    border-bottom-color: rgb(223, 225, 229);
+    border-left-color: rgb(223, 225, 229);
+    box-shadow: none;
+    border-radius: 24px;
+    margin: 0 auto;
+    width: auto;
+    max-width: 584px;
+
+    width: 600px;
+
+}
+
+.mydiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+    text-align: center;
+    padding: 25px;
+    ;
+
+}
+
+.mybtn {
+    background-color: $bgcolor;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-family: arial, sans-serif;
+    font-size: 14px;
+    margin: 11px 4px;
+    padding: 0 16px;
+    line-height: 27px;
+    height: 36px;
+    min-width: 54px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+
+}
