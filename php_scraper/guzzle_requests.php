@@ -122,7 +122,6 @@ function get_canonycal($crawler){
 if (get_canonycal($crawler)!== null) {
     echo "has canonycal";
 }
-
 function insert_intodb($url)
 {      
     include('config/conn.php');
