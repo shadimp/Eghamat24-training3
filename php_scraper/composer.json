@@ -1,0 +1,13 @@
+{
+    "name": "lenovo/php_scraper",
+    "autoload": {
+        "psr-4": {
+            "Lenovo\\PhpScraper\\": "src/"
+        }
+    },
+    "require": {
+        "guzzlehttp/guzzle": "^7.5",
+        "symfony/dom-crawler": "^6.1",
+        "symfony/css-selector": "^6.1"
+    }
+}
