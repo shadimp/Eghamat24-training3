@@ -1,42 +1,13 @@
     <!DOCTYPE html>
     <html>
+    <header>
+        <link rel="stylesheet" href="css/service_style.css">
+    </header>
 
     <head>
 
         <title> سرویس</title>
-        <style>
-            th {
-                background-color: #e4efe9;
-            }
 
-            tr:nth-child(even) {
-                background-color: #e4efe9;
-            }
-
-            .form1 {
-                margin: 0;
-                border-radius: 5px;
-                background-color: #e4efe9;
-                padding: 20px;
-                width: 800px;
-            }
-
-            * {
-                box-sizing: border-box;
-            }
-
-            input[type=submit]:hover {
-                background-color: #45a049;
-            }
-
-            .mytable {
-
-                direction: rtl;
-                background-color: white;
-                padding: 20px;
-                width: 100%;
-            }
-        </style>
     </head>
 
     <body style="direction:rtl ;">
@@ -89,16 +60,20 @@
             <tbody>
                 <?php
                 include('config/conn.php');
-                $query = mysqli_query($conn, "select * from `services`");
+                $seller_name = $_SESSION["username"];
+                $query = mysqli_query($conn, "SELECT id  FROM users  where username='$seller_name';");
+                $row = mysqli_fetch_array($query);
+                $seller_id = $row['id'];
+                $query = mysqli_query($conn, "select * from `services` where seller_id='$seller_id'");
 
                 while ($row = mysqli_fetch_array($query)) {
-                    $category_id=$row['category_id'];
+                    $category_id = $row['category_id'];
                     $query2 = mysqli_query($conn, "select name from `categories` where id='$category_id'");
                     $row2 = mysqli_fetch_array($query2)
                 ?>
                     <tr>
                         <td><?php echo $row['id']; ?></td>
-                        <td><?php echo $row['user_id']; ?></td>
+                        <td><?php echo $row['seller_id']; ?></td>
                         <!-- <td><?php echo $row['category_id']; ?></td> -->
                         <td><?php echo $row2['name']; ?></td>
                         <td><?php echo $row['title']; ?></td>

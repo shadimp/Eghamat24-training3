@@ -27,6 +27,8 @@ require_once('header.php');
             'seller_pannel',
             'seller_pannel_confirm',
             'seller_pannel_refuse',
+            'seller_pannel_paid',
+            'upload_document',
             'home'
         ];
 

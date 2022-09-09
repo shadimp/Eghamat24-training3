@@ -1,0 +1,33 @@
+
+        th {
+            background-color: #B7F8DB;
+        }
+
+        tr:nth-child(even) {
+            background-color: #B7F8DB;
+        }
+
+        .form1 {
+            margin: 0;
+            border-radius: 5px;
+            background-color: #B7F8DB;
+            padding: 20px;
+            width: 800px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .mytable {
+
+            direction: rtl;
+            background-color: white;
+            padding: 20px;
+            width: 100%;
+        }
+    

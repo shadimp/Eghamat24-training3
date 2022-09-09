@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<?php session_start();   ?>
 <html>
 
 <head>
@@ -8,7 +9,7 @@
 </head>
 
 <body style="margin-top: 0;padding:0;">
-    <header  style="margin-top: 0;padding:0;">
+    <header style="margin-top: 0;padding:0;">
         <div class="top-container">
 
             <p>
@@ -21,9 +22,9 @@
                         <a href=index.php><i class="fa fa-home" style="font-size:36px"></i></a>
                     </li>
                     <li>
-                        <a href="#link1"><a href="index.php?page=categories&catid=1"> <i class="fa fa-caret-down"></i> دسته ها</a>
+                       <a href="index.php?page=categories&catid=1"> <i class="fa fa-caret-down"></i> دسته ها</a>
                             <ul class="submenu">
-                               
+
                                 <li>
                                     <a href="index.php?page=categories&category_id=7"> دندان پزشکی </a>
                                 </li>
@@ -51,11 +52,15 @@
                         <button type="submit" class="search-button"><i class="fa fa-search"></i></button>
                     </li>
                     <li>
-                      <a href="index.php?page=installment_agreement">  توافق نامه خرید اقساطی</a> 
+                        <a href="index.php?page=installment_agreement"> توافق نامه خرید اقساطی</a>
+                    </li>
+                    <li  class="navbar-left">
+                       <a href="../buynow_paylater/logout.php"> خروج</a>
                     </li>
                     <li class="navbar-left">
-                      <a href="index.php?page=customer_pannel">پنل کاربری </a> 
+                        <a href="index.php?page=customer_pannel">پنل کاربری<?php echo htmlspecialchars($_SESSION["username"]); ?></a>
                     </li>
+                    
                 </ul>
 
 
