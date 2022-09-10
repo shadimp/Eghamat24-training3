@@ -27,10 +27,15 @@
         <tbody>
             <?php
             include('config/conn.php');
+            $seller_name = $_SESSION["username"];
+            $query = mysqli_query($conn, "SELECT id  FROM users  where username='$seller_name';");
+            $row = mysqli_fetch_array($query);
+            $seller_id = $row['id'];
+            //
             $query = mysqli_query($conn, "SELECT order_register.customer_id,order_register.id as orderid,services.id,services.category_id,
             services.title,services.description,services.installment_pay_number,services.price,categories.name as category_name
             FROM services INNER JOIN order_register ON services.id = order_register.service_id INNER JOIN categories on services.category_id = categories.id
-            where order_register.confirm_state='1' and payment_state='1';
+            where order_register.confirm_state='1' and payment_state='1' and order_register.seller_id='$seller_id';
             ");
 
             while ($row = mysqli_fetch_array($query)) {
